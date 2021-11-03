@@ -14,6 +14,7 @@ sudo apt install -y ros-${ROS_DISTRO}-desktop-full python-rosdep
 python --version 2>&1 | grep -q "2.7" || exit 1
 
 ls /etc/ros/rosdep/sources.list.d/20-default.list > /dev/null 2>&1 && sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
+chmod +x /etc/hosts
 sudo echo "199.232.28.133 raw.githubusercontent.com" >> /etc/hosts
 sudo echo "151.101.228.133 raw.github.com" >> /etc/hosts
 sudo rosdep init 
